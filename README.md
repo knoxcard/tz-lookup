@@ -49,8 +49,14 @@ Sources
 -------
 Versions prior to 6.0.7 used timezone data from Eric Muller's excellent [TZ
 timezone maps][2]. As of 6.0.7, we now use timezone data from @evansiroky's
-also-excellent [timezone-boundary-builder][3]. To regenerate the library,
-simply run `rebuild.sh`. The timezone database was last updated on 11 Apr 2018.
+also-excellent [timezone-boundary-builder][3]. To regenerate the library, you will need to install ImageMagic and gdal.
+
+```
+apt-get install imagemagick
+apt-get install gdal-bin
+```
+
+Then run `rebuild.sh`. The timezone database was last updated on 11 Apr 2018.
 
 [2]: http://efele.net/maps/tz/
 [3]: https://github.com/evansiroky/timezone-boundary-builder/
