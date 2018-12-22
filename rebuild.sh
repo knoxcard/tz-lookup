@@ -2,6 +2,8 @@
 set -ex
 TZ="2018d"
 
+rm -rf dist timezones.geojson.zip tz_a.tiff tz_b.tiff tz_c.tiff tz_d.tiff tz_e.tiff tz_f.tiff tz_g.tiff tz_h.tiff tz_indexed.json
+
 # get data
 curl -L --retry 3 -C - \
   -O "https://github.com/evansiroky/timezone-boundary-builder/releases/download/$TZ/timezones.geojson.zip" \
@@ -28,7 +30,6 @@ convert tz_e.tiff tz_e.pgm
 convert tz_f.tiff tz_f.pgm
 convert tz_g.tiff tz_g.pgm
 convert tz_h.tiff tz_h.pgm
-rm -rf dist timezones.geojson.zip tz_a.tiff tz_b.tiff tz_c.tiff tz_d.tiff tz_e.tiff tz_f.tiff tz_g.tiff tz_h.tiff tz_indexed.json
 
 # unpack ne_10m_urban_areas into a useable format. (we do this into a single
 # file because even at large sizes bitmaps are pretty manageable.)
